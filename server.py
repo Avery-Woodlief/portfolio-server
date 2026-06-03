@@ -8,8 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost:8000",
-                    "https://avery-woodlief.github.io/portfolio/"])
+CORS(app, origins=["https://avery-woodlief.github.io/portfolio/"])
 
 @app.route("/repos")
 def repos():
