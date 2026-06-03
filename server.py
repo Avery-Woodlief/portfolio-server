@@ -8,7 +8,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost:8000"])
+CORS(app, origins=["http://localhost:8000",
+                    "https://avery-woodlief.github.io/portfolio/"])
 
 @app.route("/repos")
 def repos():
@@ -23,4 +24,5 @@ def repos():
 
     return jsonify(response.json()), response.status_code
 
-app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
