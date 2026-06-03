@@ -11,7 +11,8 @@ app = Flask(__name__)
 CORS(app, origins=[
     "http://localhost:8000",
     "https://avery-woodlief.github.io",
-    "https://avery-woodlief.dev/"
+    "https://avery-woodlief.dev",
+    "https://www.avery-woodlief.dev"
 ])
 
 @app.route("/repos")
